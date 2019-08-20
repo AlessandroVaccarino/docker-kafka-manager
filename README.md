@@ -12,6 +12,8 @@ To run your first Kafka Manager container, just type:
 It will download the latest version of Yahoo Kafka Manager Docker image available, create a container, start Kafka Manager and expose web interface on port 9000.
 So, after your container starts, go to `https://localhost:9000/` to reach Yahoo Kafka Manager web interface.
 
+![Kafka Manager Homepage](https://github.com/AlessandroVaccarino/docker-kafka-manager/blob/master/bin/doc010.png)
+
 By default, the container will search for a Zookeeper instance to connect to, on `localhost:2181`
 To change Zookeeper address, use `ZK_HOSTS` envinronment variable.
 E.g.:
@@ -23,3 +25,17 @@ It will create and launch 3 containers:
 - Apache Zookeeper
 - Apache Kafka
 - Yahoo Kafka Manager
+
+### Connect to Kafka instance
+
+After connecting to your Kafka Manager Web Interface, you'll note that cluster list is empty.
+To connect to a Kafka instance, click on *Cluster*, then *Add Cluster*:
+
+![Kafka Add Cluster](https://github.com/AlessandroVaccarino/docker-kafka-manager/blob/master/bin/doc020.png)
+
+A new page will appear. Here, specify at least:
+- The name of the cluster
+- The zookeeper instance, as *hostnane*:*port*
+Then click Save. The new cluster will appear
+
+![Kafka New Cluster](https://github.com/AlessandroVaccarino/docker-kafka-manager/blob/master/bin/doc030.png)
